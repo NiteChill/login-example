@@ -1,0 +1,188 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+.title {
+  color: var(--on-surface-variant);
+  text-wrap: nowrap;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: fit-content;
+  align-items: center;
+}
+
+.text-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 13.125rem;
+  height: 3.5rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  background: var(--surface-container-highest);
+  cursor: text;
+  border-bottom: 1px solid var(--on-surface-variant);
+}
+
+.text-field .state-layer {
+  display: flex;
+  height: inherit;
+  width: inherit;
+  padding: 0.25rem 0;
+  align-items: center;
+  align-self: stretch;
+}
+
+.text-field .state-layer .leading-icon {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  color: var(--on-surface-variant);
+  font-size: 1.5rem;
+}
+
+.text-field .state-layer .content {
+  display: flex;
+  height: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+}
+
+.text-field .state-layer .content .label{
+  user-select: none;
+  color: var(--on-surface-variant);
+}
+
+.text-field .state-layer .content .input{
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 0;
+  color: var(--on-surface);
+  caret-color: var(--primary);
+  transition: height .2s cubic-bezier(0.2, 0, 0, 1);
+  text-overflow: ellipsis;
+}
+
+.text-field .state-layer .trailing-icon {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  color: var(--on-surface-variant);
+  font-size: 1.5rem;
+}
+
+.text-field .active-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2px;
+  width: 100%;
+  bottom: -1.5px;
+  flex-shrink: 0;
+}
+
+.text-field .active-indicator .indicator {
+  height: inherit;
+  width: 0;
+  background: var(--primary);
+  transition: width .2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 6.25rem;
+  width: fit-content;
+  background: var(--primary);
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+
+.button:hover .state-layer {
+  background: color-mix(in srgb, var(--on-primary) 8%, transparent);
+}
+
+.button:active .state-layer {
+  background: color-mix(in srgb, var(--on-primary) 12%, transparent);
+}
+
+.button .state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  padding: 0.625rem 1.5rem;
+}
+
+.button .state-layer .label {
+  color: var(--on-primary);
+}
+
+.text-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 6.25rem;
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.text-button:hover .state-layer {
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+.text-button:active .state-layer {
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+.text-button .state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  padding: 0.625rem 0.75rem;
+}
+
+.text-button .state-layer .label {
+  color: var(--primary);
+}
